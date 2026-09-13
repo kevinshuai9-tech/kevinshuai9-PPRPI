@@ -1,0 +1,13 @@
+# 1. 配置清华镜像
+conda config --remove-key channels
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ 
+
+# 2. 创建虚拟环境
+conda create -n survival python=3.8
+conda activate survival
+
+# 3. 安装依赖
+conda install lifelines
+pip install git+https://github.com/sebp/scikit-survival.git @master
